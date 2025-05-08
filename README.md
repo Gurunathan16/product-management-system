@@ -366,7 +366,7 @@ Include the following properties as *body*:
 
 **POST** `/product/add`
 
-
+Adds a new product to the system. Authentication Required.
 Include the following properties as *body*:
 
 - `productName` - String - Required  
@@ -423,7 +423,7 @@ Include the following properties as *body*:
 
 **POST** `/product/update`
 
-
+Updates an existing product’s details. Authentication Required.
 Include the following properties as *body*:
 
 - `id` - Integer - Required  
@@ -473,7 +473,7 @@ Include the following properties as *body*:
 
 **GET** `/product/view`
 
-
+Retrieves all products with pagination. Authentication Required.
 Include the following properties as *query parameters*:
 
 - `page` - Integer - Optional  
@@ -555,9 +555,9 @@ GET /product/view?page=0&size=12&sort=productName,desc&sort=price,asc
 
 ### 4. **DELETE PRODUCT** 
 
-**POST** `/product/`
+**POST** `/product/delete`
 
-
+Deletes a product based on Id(product). Authentication Required.
 Include the following properties as *body*:
 
 - `id` - Integer - Required  
@@ -585,7 +585,7 @@ Product Not found.
 
 **GET** `/product/companies`
 
-
+Retrieves a paginated list of all product companies(distinct). Authentication Required.
 Include the following properties as *query parameters*:
 
 - `page` - Integer - Optional  
@@ -667,6 +667,7 @@ GET /product/companies?page=0&size=12&sort=company,desc
 
 **GET** `/product/categories`
 
+Retrieves a paginated list of all product categories(distinct). Authentication Required.
 Include the following properties as *query parameters*:
 
 - `page` - Integer - Optional  
@@ -748,6 +749,7 @@ GET /product/categories?page=0&size=12&sort=category,desc
 
 **GET** `/product/usageLocations`
 
+Retrieves a paginated list of all product usage locations(distinct). Authentication Required.
 Include the following properties as *query parameters*:
 
 - `page` - Integer - Optional  
@@ -823,7 +825,7 @@ GET /product/usageLocations?page=0&size=12&sort=usageLocation,desc
 
 **GET** `/product/productsByCategory`
 
-  
+Fetches products filtered by a given category. Authentication Required.
 Include the following properties as *query parameters*:
 
  `category` - String - Required
@@ -956,7 +958,7 @@ GET /product/productsByCategory?category=LaPTOP&page=0&size=12&sort=usageLocatio
 
 **GET** `/product/productsByCompany`
 
-  
+Fetches products filtered by a given company. Authentication Required.
 Include the following properties as *query parameters*:
 
  `company` - String - Required
@@ -1062,7 +1064,7 @@ GET /product/productsByCompany?company=applE&page=0&size=12&sort=usageLocation,d
 
 **GET** `/product/productsByUsageLocation`
 
-  
+Fetches products filtered by a given usage location. Authentication Required.
 Include the following properties as *query parameters*:
 
  `usageLocation` - String - Required
@@ -1238,7 +1240,7 @@ GET /product/productsByUsageLocation?usageLocation=HOMe&page=0&size=12&sort=usag
 
 **POST** `/product/switchReminder`
 
-
+Turns the warranty reminder ON or OFF for a specific product. Authentication Required.
 Include the following properties as *body*:
 
 - `id` - Integer - Required
@@ -1281,6 +1283,8 @@ Include the following properties as *body*:
 ```
 
 ### 12. SCHEDULED METHOD SENDS REMINDER MAIL
+
+Automatically sends grouped email reminders on the 1st of every month at 10:00 AM to users whose registered products are expiring within the next month.
 
 ![Reminder mail](./screenshots/Warranty%20Reminder.png)
 </details>
