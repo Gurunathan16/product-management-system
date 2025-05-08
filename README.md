@@ -1284,3 +1284,100 @@ Include the following properties as *body*:
 
 
 </details>
+
+## 📁 Project Structure
+
+<details>
+<summary>Click to view complete tree</summary>
+  
+```
+src
+└── main
+    └── java
+        └── com
+            └── porul
+                └── product_management
+                    ├── auth
+                    │   ├── config
+                    │   │   ├── GeneralConfig.java
+                    │   │   └── SecurityConfig.java
+                    │   │
+                    │   ├── controller
+                    │   │   └── UsersController.java
+                    │   │
+                    │   ├── dto
+                    │   │   ├── TokenRequest.java
+                    │   │   ├── UsersLogin.java
+                    │   │   ├── UsersPasswordChange.java
+                    │   │   ├── UsersProfile.java
+                    │   │   ├── UsersRegistration.java
+                    │   │   └── UsersUpdate.java
+                    │   │
+                    │   ├── entity
+                    │   │   ├── UserPrincipal.java
+                    │   │   └── Users.java
+                    │   │
+                    │   ├── filter
+                    │   │   ├── JwtExceptionHandlerFilter.java
+                    │   │   └── JWTFilter.java
+                    │   │
+                    │   ├── repository
+                    │   │   └── UsersRepository.java
+                    │   │
+                    │   └── service
+                    │       ├── impl
+                    │       │   ├── JWTServiceImpl.java
+                    │       │   ├── UserDetailsServiceHelper.java
+                    │       │   └── UsersServiceImpl.java
+                    │       │
+                    │       ├── JWTService.java
+                    │       ├── RedisService.java
+                    │       └── UsersService.java
+                    │
+                    ├── product
+                    │   ├── controller
+                    │   │   └── ProductController.java
+                    │   │
+                    │   ├── dto
+                    │   │   ├── ProductInfo.java
+                    │   │   ├── ProductProjection.java
+                    │   │   ├── ProductRegistration.java
+                    │   │   └── ProductUpdate.java
+                    │   │
+                    │   ├── entity
+                    │   │   └── Product.java
+                    │   │
+                    │   ├── repository
+                    │   │   └── ProductRepository.java
+                    │   │
+                    │   └── service
+                    │       ├── impl
+                    │       │   ├── ProductServiceImpl.java
+                    │       │   └── WarrantyReminderScheduler.java
+                    │       │
+                    │       └── ProductService.java
+                    │
+                    ├── util
+                    │   ├── annotations
+                    │   │   └── validators
+                    │   │       ├── MinAgeValidator.java
+                    │   │       └── MinAge.java
+                    │   │
+                    │   ├── exception
+                    │   │   ├── AuthenticationExceptionHandler.java
+                    │   │   ├── CustomAuthEntryPoint.java
+                    │   │   └── GenericExceptionHandler.java
+                    │   │
+                    │   ├── mapper
+                    │   │   ├── ProductMappers.java
+                    │   │   └── UsersMapperImpl.java
+                    │   │   
+                    │   ├── response
+                    │       ├── ResponseCookieHandler.java
+                    │       └── ResponseEntityHandler.java
+                    │
+                    └── ProductManagementApplication.java
+```
+
+</details>
+
