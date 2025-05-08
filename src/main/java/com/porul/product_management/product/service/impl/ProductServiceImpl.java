@@ -136,10 +136,6 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ResponseEntity<Map<String, Object>> fetchProductsByCategory(String category, Pageable pageable)
     {
-        if(category == null)
-            return ResponseEntityHandler.getResponseEntity(HttpStatus.BAD_REQUEST, "Category cannot be null" +
-                    ".", "Recovery", "Check category name or add product.");
-
         Page<Product> products = productRepository.getProductsByCategory(category, getUsername(), pageable);
 
         if(products == null || products.isEmpty())
@@ -156,10 +152,6 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ResponseEntity<Map<String, Object>> fetchProductsByCompany(String company, Pageable pageable)
     {
-        if(company == null)
-            return ResponseEntityHandler.getResponseEntity(HttpStatus.BAD_REQUEST, "Company cannot be null" +
-                    ".", "Recovery", "Check company name or add product.");
-
         Page<Product> products = productRepository.getProductsByCompany(company, getUsername(), pageable);
 
         if(products == null || products.isEmpty())
@@ -175,10 +167,6 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ResponseEntity<Map<String, Object>> fetchProductsByUsageLocation(String usageLocation, Pageable pageable)
     {
-        if(usageLocation == null)
-            return ResponseEntityHandler.getResponseEntity(HttpStatus.BAD_REQUEST, "Usage Location cannot be" +
-                    " null.", "Recovery", "Check usage location or add product.");
-
         Page<Product> products = productRepository.getProductsByUsageLocation(usageLocation, getUsername(),
                 pageable);
 
