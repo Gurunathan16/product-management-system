@@ -120,7 +120,9 @@ public class UsersServiceImpl implements UsersService {
         String username = jwtService.extractUsername(oldRefreshToken);
 
         if(!redisService.isRefreshTokenValid(username, oldRefreshToken))
-            return ResponseEntityHandler.getResponseEntity(HttpStatus.UNAUTHORIZED, "Authentication Failed. Please login again.", "Details", username);
+            return ResponseEntityHandler.getResponseEntity(HttpStatus.UNAUTHORIZED, "Authentication Failed.",
+                    "Recovery",
+                    "Please login again.");
 
         redisService.removeRefreshToken(username, oldRefreshToken);
 
@@ -142,7 +144,7 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
-    public ResponseEntity<Map<String, Object>> updatePassword(@Valid UsersPasswordChange usersPasswordChange)
+    public ResponseEntity<Map<String, Object>> updatePassword(UsersPasswordChange usersPasswordChange)
     {
         if(!usersPasswordChange.password().equals(usersPasswordChange.confirmPassword()))
             return ResponseEntityHandler.getResponseEntity(HttpStatus.BAD_REQUEST, "Password - Confirm Password Mismatch","Recovery", "Password and Confirm Password should be same.");

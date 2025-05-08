@@ -19,8 +19,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/auth")
-public class UsersController
-{
+public class UsersController {
     private final UsersServiceImpl usersService;
 
     UsersController(UsersServiceImpl usersService)
@@ -40,7 +39,7 @@ public class UsersController
 
     @PostMapping("/signup")
     public ResponseEntity<Map<String, Object>>  userRegistration(@Valid @RequestBody UsersRegistration user,
-                                                                  BindingResult bindingResult)
+                                                                 BindingResult bindingResult)
     {
         if(bindingResult.hasErrors())
             return validationErrorBuilder(bindingResult);
