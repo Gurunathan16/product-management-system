@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ProductUpdate
 {
+    @NotNull(message = "Product Id cannot be null")
     private Integer id;
 
     @NotBlank(message = "Product Name cannot be null or blank")
@@ -25,7 +26,7 @@ public class ProductUpdate
     @NotBlank(message = "Usage Location cannot be null or blank")
     private String usageLocation;
 
-    @NotNull(message = "Price cannot be null or blank")
+    @NotNull(message = "Price cannot be null")
     @Min(0)
     private Double price;
 

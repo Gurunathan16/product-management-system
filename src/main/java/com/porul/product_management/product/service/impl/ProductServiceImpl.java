@@ -57,7 +57,7 @@ public class ProductServiceImpl implements ProductService {
     {
         Page<Product> products = productRepository.findAllByUsername(getUsername(), pageable);
 
-        if(products == null)
+        if(products == null || products.isEmpty())
             return ResponseEntityHandler.getResponseEntity(HttpStatus.NOT_FOUND, "No Products found.", "Recovery",
                     "Add products by clicking the '+' Button.");
 
