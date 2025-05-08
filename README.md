@@ -1280,9 +1280,9 @@ Include the following properties as *body*:
 }
 ```
 
+### 12. SCHEDULED METHOD SENDS REMINDER MAIL
 
-
-
+![Reminder mail](./screenshots/Warranty%20Reminder.png)
 </details>
 
 ## 📁 Project Structure
