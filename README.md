@@ -156,7 +156,7 @@ Include the following properties as *body*:
 ```
 
 #### Response(409 CONFLICT)
-*Occurs when the Usernam or Email ID already exists in the system.*
+*Occurs when the Username or Email ID already exists in the system.*
 ```json
 {
     "status": "Conflict",
@@ -336,13 +336,13 @@ Include the following properties as *body*:
     "message": "Authentication Failed.",
     "Recovery": "Please login again."
 }
+```
 
 ## Common Validation Error Response
 
 ```json
 {
-    "code": <HttpStatus Code>,
-    "status": <HttpStatus Status>,
+    "status": "Bad Request",
     "message": "Validation check failed.",
     "Validation Errors": [
         <Error Messages>
