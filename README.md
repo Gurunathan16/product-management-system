@@ -570,7 +570,7 @@ Include the following properties as *body*:
 ```
 
 #### Response(200 OK)
-*Product added successfully.*
+*Product deleted successfully.*
 ```plaintext
 Product Deleted Successfully.
 ```
@@ -604,7 +604,7 @@ GET /product/companies?page=0&size=12&sort=company,desc
 ```
 
 #### Response(200 OK)
-*Distinct companies under which products are registered are fetched successfully.*
+*Distinct companies under which products are registered fetched successfully.*
 ```json
 {
     "status": "OK",
@@ -686,7 +686,7 @@ GET /product/categories?page=0&size=12&sort=category,desc
 ```
 
 #### Response(200 OK)
-*Distinct categories under which products are registered are fetched successfully.*
+*Distinct categories under which products are registered fetched successfully.*
 ```json
 {
     "status": "OK",
@@ -768,7 +768,7 @@ GET /product/usageLocations?page=0&size=12&sort=usageLocation,desc
 ```
 
 #### Response(200 OK)
-*Distinct usage locations under which products are registered are fetched successfully.*
+*Distinct usage locations under which products are registered fetched successfully.*
 ```json
 {
     "status": "OK",
