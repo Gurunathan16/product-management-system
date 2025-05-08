@@ -296,10 +296,8 @@ Deletes the logged-in user's account. Authentication required.
 
 #### Response(200 OK)
 *User profile deleted successfully.*
-```json
-{
-    "Profile Deleted SuccessFully."
-}
+```plaintext
+Profile Deleted SuccessFully.
 ```
 
 ### 7. **GENERATE NEW TOKEN** 
@@ -489,10 +487,8 @@ Include the following properties as *query parameters*:
 
 
 #### Request URL
-```json
-{
-    GET /product/view?page=0&size=12&sort=productName,desc&sort=price,asc
-}
+```http
+GET /product/view?page=0&size=12&sort=productName,desc&sort=price,asc
 ```
 
 #### Response(200 OK)
@@ -559,7 +555,7 @@ Include the following properties as *query parameters*:
 
 ### 4. **DELETE PRODUCT** 
 
-**POST** `/product/delete`
+**POST** `/product/`
 
 
 Include the following properties as *body*:
@@ -575,18 +571,14 @@ Include the following properties as *body*:
 
 #### Response(200 OK)
 *Product added successfully.*
-```json
-{
-    Product Deleted Successfully.
-}
+```plaintext
+Product Deleted Successfully.
 ```
 
 #### Response(404 NOT FOUND)
 *Try deleting others or non-existing product.*
-```json
-{
-    Product Not found.
-}
+```plaintext
+Product Not found.
 ```
 
 ### 5. **FETCH COMPANIES** 
@@ -607,10 +599,8 @@ Include the following properties as *query parameters*:
 
 
 #### Request URL
-```json
-{
-    GET /product/companies?page=0&size=12&sort=company,desc
-}
+```http
+GET /product/companies?page=0&size=12&sort=company,desc
 ```
 
 #### Response(200 OK)
@@ -690,10 +680,8 @@ Include the following properties as *query parameters*:
 
 
 #### Request URL
-```json
-{
-    GET /product/categories?page=0&size=12&sort=category,desc
-}
+```http
+GET /product/categories?page=0&size=12&sort=category,desc
 ```
 
 #### Response(200 OK)
@@ -773,10 +761,8 @@ Include the following properties as *query parameters*:
 
 
 #### Request URL
-```json
-{
-    GET /product/usageLocations?page=0&size=12&sort=usageLocation,desc
-}
+```http
+GET /product/usageLocations?page=0&size=12&sort=usageLocation,desc
 ```
 
 #### Response(200 OK)
@@ -853,14 +839,12 @@ Include the following properties as *query parameters*:
 
 
 #### Request URL
-```json
-{
-    GET /product/productsByCategory?category=LaPTOP&page=0&size=12&sort=usageLocation,desc
-}
+```http
+GET /product/productsByCategory?category=LaPTOP&page=0&size=12&sort=usageLocation,desc
 ```
 
 #### Response(200 OK)
-*Products by categpry fetched successfully.*
+*Products by category fetched successfully.*
 
 <details>
 <summary>Click to expand</summary>
@@ -988,10 +972,8 @@ Include the following properties as *query parameters*:
 
 
 #### Request URL
-```json
-{
-    GET /product/productsByCompany?company=applE&page=0&size=12&sort=usageLocation,desc
-}
+```http
+GET /product/productsByCompany?company=applE&page=0&size=12&sort=usageLocation,desc
 ```
 
 #### Response(200 OK)
@@ -1096,10 +1078,8 @@ Include the following properties as *query parameters*:
 
 
 #### Request URL
-```json
-{
-    GET /product/productsByUsageLocation?usageLocation=HOMe&page=0&size=12&sort=usageLocation,desc
-}
+```http
+GET /product/productsByUsageLocation?usageLocation=HOMe&page=0&size=12&sort=usageLocation,desc
 ```
 
 #### Response(200 OK)
@@ -1291,7 +1271,7 @@ Include the following properties as *body*:
 ```
 
 #### Response(404 NOT FOUND)
-*Duplicate Product cannot be added.*
+*When no products added.*
 ```json
 {
     "status": "Not Found",
