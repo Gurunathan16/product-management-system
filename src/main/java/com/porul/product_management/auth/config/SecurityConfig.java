@@ -16,6 +16,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -55,6 +56,7 @@ public class SecurityConfig
                 /*.csrf(csrf -> csrf
                         .ignoringRequestMatchers("/auth/signup", "/auth/login", "/auth/refreshToken")
                         .csrfTokenRepository(new CookieCsrfTokenRepository())
+                        // .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
                         .csrfTokenRequestHandler(requestHandler))*/
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers("/auth/signup", "/auth/login", "/auth/refreshToken").permitAll()
