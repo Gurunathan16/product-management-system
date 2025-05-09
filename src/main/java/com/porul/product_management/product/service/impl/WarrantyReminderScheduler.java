@@ -35,7 +35,7 @@ public class WarrantyReminderScheduler {
         this.javaMailSender = javaMailSender;
     }
 
-    @Scheduled(cron = "0 09 00 07 * *")
+    @Scheduled(cron = "0 0 10 1W * *")
     public void sendWarrantyReminders() {
         List<Product> expiringProducts = productRepository.findProductsExpiringOneMonthFromNow();
 

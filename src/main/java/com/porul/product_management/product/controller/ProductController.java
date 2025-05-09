@@ -19,8 +19,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/product")
-public class ProductController
-{
+public class ProductController {
     private final ProductServiceImpl productService;
 
     public ProductController(ProductServiceImpl productService)
